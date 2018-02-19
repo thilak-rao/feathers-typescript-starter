@@ -6,11 +6,11 @@
 
 This project uses [Feathers](http://feathersjs.com). An open source web framework for building modern real-time applications.
 
+
+
 ## Getting Started
 
-Getting up and running is as easy as 1, 2, 3.
-
-1. Make sure you have [NodeJS](https://nodejs.org/) and [npm](https://www.npmjs.com/) installed.
+1. Make sure you have [NodeJS](https://nodejs.org/), and [yarn](https://yarnpkg.com/en/) installed.
 2. Install your dependencies
 
     ```
@@ -52,6 +52,5 @@ __0.1.0__
 
 ## License
 
-Copyright (c) 2016
+[![MIT Licence](https://badges.frapsoft.com/os/mit/mit.svg?v=103)](https://opensource.org/licenses/mit-license.php)
 
-Licensed under the [MIT license](LICENSE).
