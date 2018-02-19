@@ -6,18 +6,25 @@
 
 This project uses [Feathers](http://feathersjs.com). An open source web framework for building modern real-time applications.
 
+[![Dependencies badge](https://david-dm.org/xthilakx/feathers-typescript-starter/status.svg)](https://david-dm.org/xthilakx/feathers-typescript-starter)
+[![Dev Dependencies badge](https://david-dm.org/xthilakx/feathers-typescript-starter/dev-status.svg)](https://david-dm.org/xthilakx/feathers-typescript-starter)
 
 
 ## Getting Started
 
 1. Make sure you have [NodeJS](https://nodejs.org/), and [yarn](https://yarnpkg.com/en/) installed.
-2. Install your dependencies
+2. Clone the repo
 
     ```
-    cd path/to/feathers-typescript-starter; npm install
+    git clone --depth=1 https://github.com/xthilakx/feathers-typescript-starter.git
+    ```
+3. Install your dependencies
+
+    ```
+    cd feathers-typescript-starter; yarn install
     ```
 
-3. Start your app
+4. Start your app
 
     ```
     npm start

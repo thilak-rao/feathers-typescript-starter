@@ -50,7 +50,7 @@
     "nodemon": "1.15.1",
     "request": "2.83.0",
     "request-promise": "4.2.2",
-    "ts-node": "4.1.0",
+    "ts-node": "5.0.0",
     "typescript": "2.7.2"
   }
 }
