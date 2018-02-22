@@ -35,8 +35,8 @@
     "test": "yarn run eslint && yarn run mocha",
     "eslint": "eslint src/. test/. --config .eslintrc.json",
     "start": "yarn run serve",
-    "serve": "./node_modules/nodemon/bin/nodemon.js --watch \"src/**/*.js\" --ignore \"test/**/*.test.js\" --exec \"./node_modules/ts-node/dist/bin.js\" src/index.js",
-    "mocha": "mocha test/ --recursive --exit"
+    "serve": "./node_modules/nodemon/bin/nodemon.js --watch \"src/**/*.ts\" --ignore \"test/**/*.test.ts\" --exec \"./node_modules/ts-node/dist/bin.js\" src/index.ts",
+    "mocha": "./node_modules/mocha/bin/mocha -r ts-node/register test/*.ts test/**/*.ts --recursive --exit"
   },
   "dependencies": {
     "@feathersjs/configuration": "1.0.2",
@@ -46,6 +46,7 @@
     "@feathersjs/socketio": "3.2.0",
     "compression": "1.7.2",
     "cors": "2.8.4",
+    "feathers-memory": "2.1.0",
     "helmet": "3.11.0",
     "serve-favicon": "2.4.5",
     "winston": "2.4.0"
