@@ -56,6 +56,117 @@
     lodash "^4.17.4"
     radix-router "^3.0.1"
 
+"@types/body-parser@*":
+  version "1.16.8"
+  resolved "https://registry.yarnpkg.com/@types/body-parser/-/body-parser-1.16.8.tgz#687ec34140624a3bec2b1a8ea9268478ae8f3be3"
+  dependencies:
+    "@types/express" "*"
+    "@types/node" "*"
+
+"@types/compression@^0.0.35":
+  version "0.0.35"
+  resolved "https://registry.yarnpkg.com/@types/compression/-/compression-0.0.35.tgz#7673a9c4b075e5194ada8c5938291015652a21e1"
+  dependencies:
+    "@types/express" "*"
+
+"@types/cors@^2.8.3":
+  version "2.8.3"
+  resolved "https://registry.yarnpkg.com/@types/cors/-/cors-2.8.3.tgz#eaf6e476da0d36bee6b061a24d57e343ddce86d6"
+  dependencies:
+    "@types/express" "*"
+
+"@types/events@*":
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/@types/events/-/events-1.1.0.tgz#93b1be91f63c184450385272c47b6496fd028e02"
+
+"@types/express-serve-static-core@*":
+  version "4.11.1"
+  resolved "https://registry.yarnpkg.com/@types/express-serve-static-core/-/express-serve-static-core-4.11.1.tgz#f6f7212382d59b19d696677bcaa48a37280f5d45"
+  dependencies:
+    "@types/events" "*"
+    "@types/node" "*"
+
+"@types/express@*":
+  version "4.11.1"
+  resolved "https://registry.yarnpkg.com/@types/express/-/express-4.11.1.tgz#f99663b3ab32d04cb11db612ef5dd7933f75465b"
+  dependencies:
+    "@types/body-parser" "*"
+    "@types/express-serve-static-core" "*"
+    "@types/serve-static" "*"
+
+"@types/feathersjs__configuration@^1.0.0":
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/@types/feathersjs__configuration/-/feathersjs__configuration-1.0.0.tgz#330c110f3393728a59dfc2b29096e2115c6f766b"
+
+"@types/feathersjs__errors@^3.2.0":
+  version "3.2.0"
+  resolved "https://registry.yarnpkg.com/@types/feathersjs__errors/-/feathersjs__errors-3.2.0.tgz#7d37e451e6178b738f13de52c8579adc59165966"
+  dependencies:
+    "@types/express" "*"
+
+"@types/feathersjs__express@^1.1.2":
+  version "1.1.2"
+  resolved "https://registry.yarnpkg.com/@types/feathersjs__express/-/feathersjs__express-1.1.2.tgz#c666bd89dbe39220ca0b83a1bc4453142bbf81b5"
+  dependencies:
+    "@types/express" "*"
+
+"@types/feathersjs__feathers@3.0.0":
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/@types/feathersjs__feathers/-/feathersjs__feathers-3.0.0.tgz#5ce42e349f46be3900a990c9ad7bc84b2e3b5326"
+  dependencies:
+    "@types/events" "*"
+    "@types/node" "*"
+
+"@types/feathersjs__socket-commons@*":
+  version "3.1.1"
+  resolved "https://registry.yarnpkg.com/@types/feathersjs__socket-commons/-/feathersjs__socket-commons-3.1.1.tgz#1296f999441e62e06c5b7ede72e320c07c512957"
+
+"@types/feathersjs__socketio@^3.0.1":
+  version "3.0.1"
+  resolved "https://registry.yarnpkg.com/@types/feathersjs__socketio/-/feathersjs__socketio-3.0.1.tgz#78ecdcdbbd4ed4c69dc8bc5a46db37759de95090"
+  dependencies:
+    "@types/feathersjs__socket-commons" "*"
+    "@types/socket.io" "*"
+
+"@types/helmet@^0.0.37":
+  version "0.0.37"
+  resolved "https://registry.yarnpkg.com/@types/helmet/-/helmet-0.0.37.tgz#6b150f30219c0d6563e8e0a3fbcad8dd90fa4f68"
+  dependencies:
+    "@types/express" "*"
+
+"@types/mime@*":
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/@types/mime/-/mime-2.0.0.tgz#5a7306e367c539b9f6543499de8dd519fac37a8b"
+
+"@types/node@*", "@types/node@9.4.6":
+  version "9.4.6"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-9.4.6.tgz#d8176d864ee48753d053783e4e463aec86b8d82e"
+
+"@types/serve-favicon@^2.2.30":
+  version "2.2.30"
+  resolved "https://registry.yarnpkg.com/@types/serve-favicon/-/serve-favicon-2.2.30.tgz#5bea4ead966a9ad5e0f409141edba0cebf20da73"
+  dependencies:
+    "@types/express" "*"
+
+"@types/serve-static@*":
+  version "1.13.1"
+  resolved "https://registry.yarnpkg.com/@types/serve-static/-/serve-static-1.13.1.tgz#1d2801fa635d274cd97d4ec07e26b21b44127492"
+  dependencies:
+    "@types/express-serve-static-core" "*"
+    "@types/mime" "*"
+
+"@types/socket.io@*":
+  version "1.4.31"
+  resolved "https://registry.yarnpkg.com/@types/socket.io/-/socket.io-1.4.31.tgz#7a928518a35516fccd90431f94538ed3fddaba19"
+  dependencies:
+    "@types/node" "*"
+
+"@types/winston@^2.3.8":
+  version "2.3.8"
+  resolved "https://registry.yarnpkg.com/@types/winston/-/winston-2.3.8.tgz#88964f45ecb5ed1feb4bfb38a24316bee8bf8768"
+  dependencies:
+    "@types/node" "*"
+
 abbrev@1:
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/abbrev/-/abbrev-1.1.1.tgz#f8f2c887ad10bf67f634f005b6987fed3179aac8"

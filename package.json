@@ -21,7 +21,7 @@
   },
   "contributors": [],
   "bugs": {
-    "url" : "https://github.com/xthilakx/feathers-typescript-starter/issues"
+    "url": "https://github.com/xthilakx/feathers-typescript-starter/issues"
   },
   "directories": {
     "lib": "src",
@@ -51,6 +51,17 @@
     "winston": "2.4.0"
   },
   "devDependencies": {
+    "@types/compression": "0.0.35",
+    "@types/cors": "2.8.3",
+    "@types/feathersjs__configuration": "1.0.0",
+    "@types/feathersjs__errors": "3.2.0",
+    "@types/feathersjs__express": "1.1.2",
+    "@types/feathersjs__feathers": "3.0.0",
+    "@types/feathersjs__socketio": "3.0.1",
+    "@types/helmet": "0.0.37",
+    "@types/node": "9.4.6",
+    "@types/serve-favicon": "2.2.30",
+    "@types/winston": "2.3.8",
     "eslint": "4.18.0",
     "mocha": "5.0.1",
     "nodemon": "1.15.1",
