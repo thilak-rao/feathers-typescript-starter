@@ -7,10 +7,11 @@ describe('\'todo\' service', () => {
     assert.ok(todo, 'Registered the service');
   });
 
-  // it('create new todo', () => {
-  //   const newTodo = app.service('todo').create({
-  //     "todo": "using mocha to test todo service"
-  //   });
-  //   assert.equal(newTodo.todo === "using mocha to test todo service", "new todo created");
-  // });
+  it('create new todo', () => {
+    app.service('todo').create({
+      "todo": "using mocha to test todo service"
+    }).then((data) => {
+      assert.equal(data.todo == "using mocha to test todo service", "new todo created");
+    });
+  });
 });
