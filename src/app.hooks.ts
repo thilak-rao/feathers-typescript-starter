@@ -1,36 +1,36 @@
 (() => {
   // Application hooks that run for every service
-  const logger = require('./hooks/logger');
+  const logger = require("./hooks/logger");
 
   module.exports = {
     before: {
       all: [ logger() ],
+      create: [],
       find: [],
       get: [],
-      create: [],
-      update: [],
       patch: [],
-      remove: []
+      remove: [],
+      update: [],
     },
 
     after: {
       all: [ logger() ],
+      create: [],
       find: [],
       get: [],
-      create: [],
-      update: [],
       patch: [],
-      remove: []
+      remove: [],
+      update: [],
     },
 
     error: {
       all: [ logger() ],
+      create: [],
       find: [],
       get: [],
-      create: [],
-      update: [],
       patch: [],
-      remove: []
-    }
+      remove: [],
+      update: [],
+    },
   };
 })();
