@@ -64,6 +64,7 @@ class App extends Component {
       })
         .then((res) => res.json())
         .then((json) => {
+          this.hideLoading();
           console.log(json);
         }, (error) => {
           console.error(error);
@@ -76,7 +77,6 @@ class App extends Component {
         validationError: true,
       });
     }
-    this.hideLoading();
   }
 
   updateUrl(e) {

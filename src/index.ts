@@ -1,6 +1,7 @@
 (() => {
   const logger = require("winston");
   const app = require("./app");
+  app.set("port", 3030);
   const port = app.get("port");
   const server = app.listen(port);
 
