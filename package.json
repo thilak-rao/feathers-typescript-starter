@@ -34,7 +34,8 @@
   "scripts": {
     "test": "yarn run eslint && yarn run mocha",
     "tslint": "./node_modules/tslint/bin/tslint -c tslint.json 'src/**/*.ts' 'test/*.ts' 'test/**/*.ts'",
-    "start": "yarn run serve",
+    "start": "yarn build-react && yarn run serve",
+    "build-react": "cd react && yarn build",
     "serve": "./node_modules/nodemon/bin/nodemon.js --watch \"src/**/*.ts\" --ignore \"test/**/*.test.ts\" --exec \"./node_modules/ts-node/dist/bin.js\" src/index.ts",
     "mocha": "./node_modules/mocha/bin/mocha -r ts-node/register test/*.ts test/**/*.ts --recursive --exit"
   },

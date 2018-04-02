@@ -27,7 +27,7 @@ This project uses [Feathers](http://feathersjs.com). An open source web framewor
 4. Start your app
 
     ```
-    npm start
+    yarn run start
     ```
 
 ## Testing
