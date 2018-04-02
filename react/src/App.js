@@ -55,7 +55,22 @@ class App extends Component {
       this.setState({
         validationError: false,
       });
-
+      fetch('/sitemap', {
+        method: 'POST',
+        body: JSON.stringify({ url: this.state.url }),
+        headers: new Headers({
+          'Content-Type': 'application/json'
+        })
+      })
+        .then((res) => res.json())
+        .then((json) => {
+          console.log(json);
+        }, (error) => {
+          console.error(error);
+          this.setState({
+            error
+          })
+        })
     } else {
       this.setState({
         validationError: true,

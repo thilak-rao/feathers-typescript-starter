@@ -48,9 +48,12 @@
     "@types/mocha": "^2.2.48",
     "compression": "1.7.2",
     "cors": "2.8.4",
-    "feathers-memory": "2.1.0",
+    "express-validator": "5.1.0",
     "helmet": "3.11.0",
+    "is-url": "^1.2.4",
     "serve-favicon": "2.4.5",
+    "sitemapper": "2.1.13",
+    "url-parse": "1.2.0",
     "winston": "2.4.0"
   },
   "devDependencies": {
