@@ -1,5 +1,5 @@
-import React, { Component } from 'react';
-import { Grid, Input, Button, Segment } from 'semantic-ui-react';
+import React, {Component} from 'react';
+import {Grid, Input, Button, Segment, Table, Header} from 'semantic-ui-react';
 import './App.css';
 import isURL from 'is-url';
 
@@ -32,7 +32,10 @@ class App extends Component {
     this.state = {
       url: '',
       validationError: false,
-      showLoading: false
+      showLoading: false,
+      sitemapAvailable: false,
+      tableData: [],
+      sitemapUrl: '',
     }
   }
 
@@ -57,7 +60,7 @@ class App extends Component {
       });
       fetch('/sitemap', {
         method: 'POST',
-        body: JSON.stringify({ url: this.state.url }),
+        body: JSON.stringify({url: this.state.url}),
         headers: new Headers({
           'Content-Type': 'application/json'
         })
@@ -65,14 +68,20 @@ class App extends Component {
         .then((res) => res.json())
         .then((json) => {
           this.hideLoading();
-          console.log(json);
+          this.setState({
+            sitemapAvailable: true,
+            tableData: json.sites,
+            sitemapUrl: json.url,
+          });
         }, (error) => {
           console.error(error);
+          this.hideLoading();
           this.setState({
             error
           })
         })
     } else {
+      this.hideLoading();
       this.setState({
         validationError: true,
       });
@@ -87,34 +96,73 @@ class App extends Component {
 
   render() {
     return (
-      <Grid columns={2} verticalAlign={'middle'} container={true} stackable={true} centered>
+      <Grid columns={1} container={true} stackable={true}>
         <Grid.Row>
           <Grid.Column>
             <Segment stacked style={css.inputContainer}>
+              <Header as='h1'>sitemap.xml viewer</Header>
               <form onSubmit={(e) => this.handleSubmit(e)}>
                 <label htmlFor="urlInput">
                   Please type a URL
                   <Input label='http://' name={"urlInput"} placeholder='Enter URL' style={css.input} focus
                          onChange={(e) => this.updateUrl(e)} error={this.state.validationError}
-                         loading={this.state.showLoading} />
+                         loading={this.state.showLoading}/>
                 </label>
                 {this.state.validationError && <InputError></InputError>}
-                <Button content='Visualize' primary style={css.buttonMargin} type={"submit"}/>
+                <Button content="Show 'Em" primary style={css.buttonMargin} type={"submit"}/>
               </form>
             </Segment>
           </Grid.Column>
         </Grid.Row>
+        {this.state.sitemapAvailable && <Grid.Row><Grid.Column><Header as='h3'>{this.state.sitemapUrl}</Header></Grid.Column></Grid.Row>}
+        {this.state.sitemapAvailable && <Grid.Row stretched><Grid.Column stretched><SiteMapTable data={this.state.tableData} /></Grid.Column></Grid.Row>}
       </Grid>
     );
   }
 }
 
-function InputError(){
+function InputError() {
   return (
     <div style={css.inputError}>
       <p>Please type a valid <a href="https://en.wikipedia.org/wiki/Hostname">hostname</a></p>
     </div>
   );
+}
+
+class SiteMapTable extends Component {
+  render() {
+    return (
+      <Table celled>
+        <Table.Header>
+          <Table.Row>
+            <Table.HeaderCell>Index</Table.HeaderCell>
+            <Table.HeaderCell>URL</Table.HeaderCell>
+          </Table.Row>
+        </Table.Header>
+        <SiteMapTableBody data={this.props.data} />
+      </Table>
+    );
+  }
+}
+
+class SiteMapTableBody extends Component {
+  render() {
+    let cells = this.props.data.map((link, count) => {
+      count += 1;
+      return (
+        <Table.Row key={count}>
+          <Table.Cell>{count}</Table.Cell>
+          <Table.Cell><a href={link} target={"_blank"}>{link}</a></Table.Cell>
+        </Table.Row>
+      );
+    });
+
+    return (
+      <Table.Body>
+        { cells }
+      </Table.Body>
+    );
+  }
 }
 
 export default App;

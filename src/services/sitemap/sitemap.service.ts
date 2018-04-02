@@ -16,7 +16,12 @@ module.exports = (app) => {
           url: `${sitemapURL.href}/sitemap.xml`,
         });
 
-        sitemap.fetch().then(({ url, sites }) => resolve({url, sites})).catch((error) => reject(error));
+        sitemap.fetch().then(({ url, sites }) => {
+          resolve({
+            sites,
+            url,
+          });
+        }).catch((error) => reject(error));
       });
     },
   };
